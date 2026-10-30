@@ -75,15 +75,27 @@ footer b{color:var(--muted);font-weight:500}
 @media(max-width:820px){.blocks{grid-template-columns:1fr}.block{min-height:0}h1{font-size:30px}}
 @media(max-width:420px){main{padding:44px 16px 16px}.portrait{width:124px;height:124px}h1{font-size:26px}.theme{top:10px;right:10px}}
 @media(prefers-reduced-motion:reduce){.block,.go i{transition:none}}
+/* 橫式標頭：頭像在左、文字在右 */
+.hero{display:flex;align-items:center;gap:30px;max-width:760px;margin:0 auto 44px;text-align:left}
+.hero .portrait{flex:none;width:136px;height:136px;margin:0}
+.hero h1{font-size:40px;margin:0 0 2px}
+.hero .brand-en{margin:0 0 10px}
+.hero .sub{margin:0}
+@media(max-width:560px){.hero{gap:16px;margin-bottom:30px;margin-top:34px}.hero .portrait{width:92px;height:92px;border-width:4px}.hero h1{font-size:28px}.hero .brand-en{font-size:11px;letter-spacing:.16em}.hero .sub{font-size:14px}}
+@media(max-width:360px){.hero .portrait{width:76px;height:76px}.hero h1{font-size:24px}}
 </style>
 </head>
 <body>
 <button class="theme" id="theme">切換深淺色</button>
 <main>
-  <div class="portrait"><img src="banban-b-512.jpg" alt="斑斑"></div>
-  <h1><em>斑斑</em>的呼嚕工坊</h1>
-  <div class="brand-en">Ben's Purr Nook</div>
-  <p class="sub">呼嚕呼嚕，斑斑陪著你。</p>
+  <header class="hero">
+    <div class="portrait"><img src="banban-b-512.jpg" alt="斑斑"></div>
+    <div class="hero-text">
+      <h1><em>斑斑</em>的呼嚕工坊</h1>
+      <div class="brand-en">Ben's Purr Nook</div>
+      <p class="sub">呼嚕呼嚕，斑斑陪著你。</p>
+    </div>
+  </header>
 
   <div class="blocks">
     <button type="button" class="block b-studio" id="studioBtn" aria-haspopup="dialog">
