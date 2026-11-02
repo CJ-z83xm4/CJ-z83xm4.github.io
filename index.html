@@ -7,8 +7,15 @@
 <meta name="description" content="斑斑的呼嚕工坊 Ben's Purr Nook — 喵時光、貓咪健康誌、貓咖與斑斑工作室的入口。">
 <title>斑斑的呼嚕工坊 Ben's Purr Nook</title>
 <meta name="theme-color" content="#fbf6ef">
-<link rel="icon" type="image/jpeg" href="banban-b-192.jpg">
-<link rel="apple-touch-icon" href="banban-b-192.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="tab-home-16.png?v=5">
+<link rel="icon" type="image/png" sizes="32x32" href="tab-home-32.png?v=5">
+<link rel="icon" type="image/png" sizes="48x48" href="tab-home-48.png?v=5">
+<link rel="shortcut icon" href="favicon.ico?v=5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="斑斑的呼嚕工坊 Ben's Purr Nook">
+<meta property="og:description" content="呼嚕呼嚕，斑斑陪著你。">
+<meta property="og:image" content="https://cj-z83xm4.github.io/banban-share-1200x630.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icon-home-180.png">
 <style>
 :root{
   --bg:#fbf6ef; --card:#ffffff; --ink:#3a2f2a; --muted:#6b5a4f; --muted-soft:#8a7b72; --line:#e6ddd0;
@@ -85,9 +92,22 @@ footer .ver{letter-spacing:.02em}
 .hero .sub{margin:0}
 @media(max-width:560px){.hero{gap:16px;margin-bottom:30px;margin-top:34px}.hero .portrait{width:92px;height:92px;border-width:4px}.hero h1{font-size:28px}.hero .brand-en{font-size:11px;letter-spacing:.16em}.hero .sub{font-size:14px}}
 @media(max-width:360px){.hero .portrait{width:76px;height:76px}.hero h1{font-size:24px}}
+/* 深色文字版：只在淺色版面生效，只深化文字與連結色，圖示底色維持淺色。對比度皆達 4.5:1 */
+@media(prefers-color-scheme:light){
+:root:not([data-theme=dark]) body.deep{--muted-soft:#74665d}
+:root:not([data-theme=dark]) body.deep .b-time .go{color:#b4531a!important}
+:root:not([data-theme=dark]) body.deep .b-diary .go{color:#2f7a5c}
+:root:not([data-theme=dark]) body.deep .b-studio .go{color:#0059b3}
+:root:not([data-theme=dark]) body.deep h1 em{color:#d4692f}
+}
+:root[data-theme=light] body.deep{--muted-soft:#74665d}
+:root[data-theme=light] body.deep .b-time .go{color:#b4531a!important}
+:root[data-theme=light] body.deep .b-diary .go{color:#2f7a5c}
+:root[data-theme=light] body.deep .b-studio .go{color:#0059b3}
+:root[data-theme=light] body.deep h1 em{color:#d4692f}
 </style>
 </head>
-<body>
+<body class="deep">
 <button class="theme" id="theme">切換深淺色</button>
 <main>
   <header class="hero">
